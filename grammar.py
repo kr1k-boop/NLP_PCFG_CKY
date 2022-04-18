@@ -52,20 +52,19 @@ class PCFG(object):
 		Return True if the grammar is a valid PCFG in CNF.
 		Otherwise return False. 
 		"""
-
 		for key,values in self.lhsrules.items():
 			lhs = values[0][0]
 			#print(lhs)
 			rhs=[]
 			for i in range(len(values)):
-			    rhs.append(values[i][2])
-
-			#print(round(sum(rhs)))
+				rhs.append(values[i][2])
+			print(round(sum(rhs)))
 			test = round(fsum(rhs))
 			if test==1:
-			    return True
+				return True
 			else:
-			    return False
+				return False
+
 
 
 
